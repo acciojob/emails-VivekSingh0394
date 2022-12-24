@@ -79,7 +79,7 @@ ArrayList<Mail>Trash = new ArrayList<>();
         for(int i =0 ; i < Inbox.size();i++)
         {
             Mail mail= Inbox.get(i);
-            if(mail.date.compareTo(start)>0 && mail.date.compareTo(end)<0)
+            if(mail.date.compareTo(start)>=0 && mail.date.compareTo(end)<=0)
             {
                 mailbetween++;
             }
