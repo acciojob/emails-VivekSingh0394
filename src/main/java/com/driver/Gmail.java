@@ -26,7 +26,8 @@ ArrayList<Mail>Trash = new ArrayList<>();
         // 2. The mails are received in non-decreasing order. This means that the date of a new mail is greater than equal to the dates of mails received already.
        if(Inbox.size()==getInboxCapacity())
        {
-           Inbox.remove(Inbox.size()-1);
+          // Inbox.remove(Inbox.size()-1);
+           Trash.add(Inbox.remove(Inbox.size()-1));
        }
        Inbox.add(0,new Mail(date,sender,message));
     }
@@ -40,7 +41,9 @@ ArrayList<Mail>Trash = new ArrayList<>();
 
             if(mail.message.equals(message))
             {
+
                 Trash.add(new Mail(mail.date,mail.sender,mail.message));
+                Inbox.remove(mail);
             }
         }
 
@@ -50,7 +53,8 @@ ArrayList<Mail>Trash = new ArrayList<>();
     public String findLatestMessage(){
         // If the inbox is empty, return null
         // Else, return the message of the latest mail present in the inbox
-        if(Inbox.size()==0)return null;
+        if(Inbox.size()==0)
+            return null;
 
         Mail mail = Inbox.get(0);
         return mail.message;
@@ -60,7 +64,8 @@ ArrayList<Mail>Trash = new ArrayList<>();
     public String findOldestMessage(){
         // If the inbox is empty, return null
         // Else, return the message of the oldest mail present in the inbox
-        if(Inbox.size()==0)return null;
+        if(Inbox.size()==0)
+            return null;
         Mail mail = Inbox.get(Inbox.size()-1);
         return mail.message;
 
