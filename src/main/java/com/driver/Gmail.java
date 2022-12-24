@@ -2,20 +2,6 @@ package com.driver;
 
 import java.util.ArrayList;
 import java.util.Date;
-class Mail
-{
-    Date date;
-    String sender;
-    String message;
-    public Mail(Date date,String sender,String message)
-    {
-        this.date=date;
-        this.sender=sender;
-        this.message = message;
-    }
-
-
-}
 
 public class Gmail extends Email {
 ArrayList<Mail>inbox=new ArrayList<>();
