@@ -110,6 +110,7 @@ ArrayList<Mail>Trash = new ArrayList<>();
 
     public int getInboxCapacity() {
         // Return the maximum number of mails that can be stored in the inbox
-        return inboxCapacity;
+        return this.inboxCapacity;
+
     }
 }
