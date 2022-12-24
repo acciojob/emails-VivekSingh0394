@@ -15,6 +15,7 @@ public class Workspace extends Gmail{
         // The inboxCapacity is equal to the maximum value an integer can store.
         super(emailId);
         inboxCapacity=Integer.MAX_VALUE;
+        calendar=new ArrayList<>();
 
     }
 
@@ -30,6 +31,7 @@ public class Workspace extends Gmail{
         // 2. If you want to attend a meeting, you must join it at its start time and leave at end time.
         // Example: If a meeting ends at 10:00 am, you cannot attend another meeting starting at 10:00 am
 
+        if(calendar.size()==0)return 0;
             Collections.sort(calendar,new Comparator<Meeting>()
             {
                 public int compare(Meeting a,Meeting b)// sorting according to the end time of meetings
