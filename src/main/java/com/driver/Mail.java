@@ -3,9 +3,9 @@ package com.driver;
 import java.util.Date;
 
 public class Mail {
-    Date date;
-    String sender;
-    String message;
+    public Date date;
+    public String sender;
+    public String message;
 
     public Mail(Date date, String sender, String message) {
         this.date = date;
@@ -13,5 +13,15 @@ public class Mail {
         this.message = message;
     }
 
+    public Date getDate() {
+        return date;
+    }
 
+    public String getSender() {
+        return sender;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }
